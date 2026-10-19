@@ -1,0 +1,33 @@
+# 已核验文献清单
+
+检索及复核日期：2026-10-17—18（Asia/Shanghai）。本文件列12篇主文献及2篇补充边界文献。主文献均核对作者原文/官方元数据，并阅读与判断有关的正文；“读过相关证明”不表示形式化验证整篇论文。预印本不等于同行评议。定理编号以下列版本为准。
+
+## 12篇主文献
+
+| 编号 | 题名、作者、年份与状态 | 可靠来源 | 阅读定位、具体关系与限制 |
+|---|---|---|---|
+| R1 | **Distribution-Free Prediction Sets for Two-Layer Hierarchical Models** — Robin Dunn, Larry Wasserman, Aaditya Ramdas。2018预印本；2022在线；JASA **118(544):2491–2502, 2023** | [arXiv](https://arxiv.org/abs/1809.07441)、[v4正文](https://arxiv.org/html/1809.07441v4)、[期刊DOI](https://www.tandfonline.com/doi/abs/10.1080/01621459.2022.2060112) | 已读§4及相关证明：Thm7分布函数池化是渐近保证；Thm9每来源一次抽样有有限样本保证；Thm10重复抽样并平均p值给1−2α形式，不能直接写成1−α。已知来源，两层随机效应/条件iid；预测新来源观测。是必须比较的基础工作。 |
+| R2 | **Distribution-free inference with hierarchical data** — Yonghoon Lee, Rina Foygel Barber, Rebecca Willett。2023预印本；v4为2025-08-02。作者页列为 **ACM Journal of Data Science**，具体正式年份/卷期本轮未直接核实 | [arXiv](https://arxiv.org/abs/2306.06342)、[v4正文](https://arxiv.org/html/2306.06342v4)、[作者出版页](https://yhoon31.github.io/publications.html)、[ACM DOI](https://dl.acm.org/doi/abs/10.1145/3786352) | 已读Definition1、§2.2 Thm1、Appendix E.1。HCP用每来源相同总权重，校准行权重与来源大小成反比，另加测试来源∞质量；有限样本边际覆盖。来源身份已知。HCP²额外矩保证不能推广到任意组内依赖。**最接近的直接方法基线。** ACM页访问受限，引用年份采用已核实预印本信息，不补造期刊年。 |
+| R3 | **Generalized Hierarchical Conformal Prediction** — Soham Mallick, Eric Tchetgen Tchetgen, Edgar Dobriban, Yonghoon Lee。**2026预印本，v1 2026-08-16** | [arXiv元数据](https://arxiv.org/abs/2608.15500)、[v1正文](https://arxiv.org/html/2608.15500v1) | 主代理核验元数据及A1–A3、Thm2.1；文献代理阅读Appendix E.1的donation/symmetrization证明。目标是测试来源已经有o条记录时预测下一条，并处理参考组大小与测试观察数不匹配。其组身份已知，且组内条件iid等假设强于本题均匀选点模型。**确有此文，但不是未知来源身份的直接解。** |
+| R4 | **SymmPI: Predictive Inference for Data with Group Symmetries** — Edgar Dobriban, Mengxin Yu。2023预印本；**JRSSB 87(5):1353–1381, 2025**，DOI 10.1093/jrsssb/qkaf022 | [arXiv](https://arxiv.org/abs/2312.16160)、[v3正文](https://arxiv.org/html/2312.16160v3)、[期刊](https://academic.oup.com/jrsssb/article/87/5/1353/8127060) | 已读Thm4.2、§5层级例、§9.1证明。一般群作用不变性、分布等变映射及任意观测映射obs；completion逆像可表达部分观测。确定性覆盖下界、恰当随机化可精确。层级实例给定分支，但**不能据此说一般定理只允许已知分组**。来源缺失可能是抽象实例，专用计算和效率仍需另证。 |
+| R5 | **Conditional Predictive Inference for General Structured Data with Group Symmetries** — Yichen Shen, Mengxin Yu。**2026预印本，v1 2026-05-18** | [arXiv](https://arxiv.org/abs/2605.17934)、[v1正文](https://arxiv.org/html/2605.17934v1) | 已读Thm3.1、Algorithm1、§4.2.1–2及G.2证明。C-SymmPI扩展到函数加权的近条件覆盖，误差含正则化/插值项；不是每个新来源的精确条件覆盖。一般obs允许completion，层级应用保留分支关系。是“部分观测框架已存在”的强反证。 |
+| R6 | **Conformal Prediction Beyond Exchangeability** — Rina Foygel Barber, Emmanuel J. Candès, Aaditya Ramdas, Ryan J. Tibshirani。**Annals of Statistics 51(2):816–845, 2023** | [arXiv](https://arxiv.org/abs/2202.13415)、[v5正文](https://arxiv.org/html/2202.13415v5)、[官方论文](https://projecteuclid.org/journals/annals-of-statistics/volume-51/issue-2/Conformal-prediction-beyond-exchangeability/10.1214/23-AOS2276.pdf) | 已读§4.1 Thm2、§4.3与§4.5。一般依赖下可用交换前后的TV距离控制覆盖缺口；数据依赖权重需要正确处理条件分布。部分来源信息不自动提供小且可算的TV。不能声称首次“允许任意依赖”，也不能把该界当已解决本题。 |
+| R7 | **Unifying Different Theories of Conformal Prediction** — Rina Foygel Barber, Ryan J. Tibshirani。2025预印本；**Electronic Journal of Statistics 20(1):1428–1474, 2026** | [arXiv](https://arxiv.org/abs/2504.02292)、[v2正文](https://arxiv.org/html/2504.02292v2)、[作者出版页](https://www.stat.berkeley.edu/~ryantibs/research.html)、[另一作者页](https://rinafb.github.io/research/) | 已读§3 Thm2、§4.6 Thm7、§7。部分信息U与参考条件分布Q加TV误差的统一框架很宽；一般联合分布加权排列版本需已知可算的排列似然比。这里的“partial information”不是来源缺失专用算法。若结果仅是“某TV小则覆盖好”，高度可能只是实例化。 |
+| R8 | **Robust Yet Efficient Conformal Prediction Sets** — Soroush H. Zargarbashi, Mohammad Sadegh Akhondzadeh, Aleksandar Bojchevski。**ICML 2024，PMLR 235:17123–17147** | [正式论文页](https://proceedings.mlr.press/v235/h-zargarbashi24a.html)、[正文](https://arxiv.org/html/2407.09165v1) | 已读§3.2 Prop3.2、§3.3 Eq5、§G。在兼容扰动/污染校准集上优化保守分位数，并给MILP等计算。未知来源依赖不同于特征或响应污染，但“最坏兼容对象＋分位数＋覆盖”的方法框架已经发表。原文高分代表conforming，与残差阈值方向相反，不能照抄最小/最大号。 |
+| R9 | **Split Conformal Prediction under Data Contamination** — Jason Clarkson, Wenkai Xu, Mihai Cucuringu, Gesine Reinert。**COPA 2024，PMLR 230:5–27** | [正式论文页](https://proceedings.mlr.press/v230/clarkson24a.html)、[正文](https://arxiv.org/html/2407.07700v1) | 已读§3 Eq4、Lemma1及证明。iid Huber混合校准与独立测试；KS距离和污染率控制覆盖变化。来源标签缺失比例不能直接充当iid污染比例。作者名按正式版Jason，arXiv早版显示Jase；年份按正式PMLR，不据HTML异常渲染日期。 |
+| R10 | **The Exceedance Design Effect: Effective Sample Size for Thresholds under Clustering** — Adam Noonan。**2026预印本，v2 2026-10-01** | [arXiv](https://arxiv.org/abs/2608.21262)、[v2正文](https://arxiv.org/html/2608.21262v2) | 已读v2 §2 Thm1及证明/讨论。来源数趋于无穷的阈值覆盖CLT；有效样本量取决于超阈值指示变量的相关性，而非一般score ICC。没有未知来源的精确有限样本保证。反驳工作记录曾用v1，正式判断以v2为准，不混用节号或把近似Beta当精确定理。 |
+| R11 | **Conformal Prediction Through the Lens of Hypothesis Testing: Universality, Impossibility, and Optimality** — Ryan J. Tibshirani, Rina Foygel Barber, Aaditya Ramdas。**2026预印本，v2 2026-09-23** | [arXiv](https://arxiv.org/abs/2608.27310)、[v2正文](https://arxiv.org/html/2608.27310v2) | 已读Prop1、Thms3–5/7与Cor1。交换观测单位的universality不等于来源交换下的记录交换；完全条件覆盖不可能性不适用于本题边际覆盖。检验—预测对偶和TV下界可作工具，但仍需构造本题的观察分布类。v1 Thm4的sup在v2改为inf，引用必须注明版本。 |
+| R12 | **Test-time Augmentation Improves Efficiency in Conformal Prediction** — Divya Shanmugam, Helen Lu, Swami Sankaranarayanan, John Guttag。**CVPR 2025:20622–20631** | [CVF正式页及论文入口](https://openaccess.thecvf.com/content/CVPR2025/html/Shanmugam_Test-time_Augmentation_Improves_Efficiency_in_Conformal_Prediction_CVPR_2025_paper.html)、[正文](https://arxiv.org/html/2505.22764) | 已读§4 Proposal/Preserving exchangeability。先将每个原始输入的增强预测聚合为一个score，聚合参数在独立D_TTA学习，然后在D_cal校准。它研究增强改善score效率，不把m个增强视图当作m个独立校准样本，也不解决丢失来源ID。 |
+
+## 两篇补充边界文献，不作为直接解决证据
+
+- **CS-WCP: Robust Conformal Sets for LLM-Judge Traffic Shifts with Uncertain Group Proportions**，Ibne Farabi Shihab、Fariya Afrin，2026预印本。[元数据](https://arxiv.org/abs/2609.27955)、[v1全文](https://arxiv.org/html/2609.27955v1)。已读Eq8、Thm2、Appendix A.1/A.2、Prop3：对兼容权重取集合并集，支付置信失败概率等误差，并给精确端点计算。这里分区固定或独立学习、校准iid、未知的是流量比例，**不是依赖来源**。arXiv编号月份和submission显示日期不一致，本报告只用2026预印本状态，不断言首发月份；新颖性判断不依赖这一篇单独成立。
+- **Robust Validation: Confident Predictions Even When Distributions Shift**，Maxime Cauchois、Suyash Gupta、Alnur Ali、John C. Duchi，JASA 119(548):3033–3044，2024，DOI 10.1080/01621459.2023.2298037。[arXiv](https://arxiv.org/abs/2008.04267)。元数据和摘要已核验，但全文PDF因读取限制未完成定理级审查；仅作为分布稳健预测背景，不能援引其未读定理断言解决本题。
+
+## 引用边界与仍需补查的地方
+
+“来源分组”是随机抽样单位的身份关系；不是类别、人口子群、输入聚类、层级分类标签或部分响应标签。上述近邻文献只有在抽样单位、可观测信息、覆盖目标均匹配时才构成直接覆盖，不能靠标题判重。
+
+GHCP参考文献向后追到R1/R2/R4，向前定向查到C-SymmPI、2026统一/检验框架及10月更新的聚类阈值文献。没有穷尽所有引用图或保证当天所有新预印本都已收录。record linkage、部分分区、dependency graph方向本轮未找到经核验的直接解；需在正式立项前由研究者/导师追加针对性查新。
+
+更新规则：新增条目同时记录可靠链接、版本、实际读到的假设/定理/证明位置和贡献边界；不可只把“相关标题”加入已核验清单。若新文献直接证明所选缺失模型的信息效率界或下界，优先更新主备忘录的立项结论。
